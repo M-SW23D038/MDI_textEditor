@@ -37,8 +37,8 @@
             saveToolStripMenuItem1 = new ToolStripMenuItem();
             saveAsToolStripMenuItem = new ToolStripMenuItem();
             toolStripSeparator1 = new ToolStripSeparator();
-            printToolStripMenuItem = new ToolStripMenuItem();
             printPreviewToolStripMenuItem = new ToolStripMenuItem();
+            printToolStripMenuItem = new ToolStripMenuItem();
             toolStripSeparator2 = new ToolStripSeparator();
             exitToolStripMenuItem = new ToolStripMenuItem();
             editToolStripMenuItem = new ToolStripMenuItem();
@@ -59,6 +59,9 @@
             searchToolStripMenuItem = new ToolStripMenuItem();
             toolStripSeparator5 = new ToolStripSeparator();
             aboutToolStripMenuItem = new ToolStripMenuItem();
+            printDocument1 = new System.Drawing.Printing.PrintDocument();
+            printPreviewDialog1 = new PrintPreviewDialog();
+            printDialog1 = new PrintDialog();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -74,7 +77,7 @@
             // 
             // fileToolStripMenuItem1
             // 
-            fileToolStripMenuItem1.DropDownItems.AddRange(new ToolStripItem[] { newToolStripMenuItem1, openToolStripMenuItem1, toolStripSeparator, saveToolStripMenuItem1, saveAsToolStripMenuItem, toolStripSeparator1, printToolStripMenuItem, printPreviewToolStripMenuItem, toolStripSeparator2, exitToolStripMenuItem });
+            fileToolStripMenuItem1.DropDownItems.AddRange(new ToolStripItem[] { newToolStripMenuItem1, openToolStripMenuItem1, toolStripSeparator, saveToolStripMenuItem1, saveAsToolStripMenuItem, toolStripSeparator1, printPreviewToolStripMenuItem, printToolStripMenuItem, toolStripSeparator2, exitToolStripMenuItem });
             fileToolStripMenuItem1.Name = "fileToolStripMenuItem1";
             fileToolStripMenuItem1.Size = new Size(46, 24);
             fileToolStripMenuItem1.Text = "&File";
@@ -126,6 +129,15 @@
             toolStripSeparator1.Name = "toolStripSeparator1";
             toolStripSeparator1.Size = new Size(221, 6);
             // 
+            // printPreviewToolStripMenuItem
+            // 
+            printPreviewToolStripMenuItem.Image = (Image)resources.GetObject("printPreviewToolStripMenuItem.Image");
+            printPreviewToolStripMenuItem.ImageTransparentColor = Color.Magenta;
+            printPreviewToolStripMenuItem.Name = "printPreviewToolStripMenuItem";
+            printPreviewToolStripMenuItem.Size = new Size(224, 26);
+            printPreviewToolStripMenuItem.Text = "Print Pre&view";
+            printPreviewToolStripMenuItem.Click += printPreviewToolStripMenuItem_Click_1;
+            // 
             // printToolStripMenuItem
             // 
             printToolStripMenuItem.Image = (Image)resources.GetObject("printToolStripMenuItem.Image");
@@ -134,14 +146,7 @@
             printToolStripMenuItem.ShortcutKeys = Keys.Control | Keys.P;
             printToolStripMenuItem.Size = new Size(224, 26);
             printToolStripMenuItem.Text = "&Print";
-            // 
-            // printPreviewToolStripMenuItem
-            // 
-            printPreviewToolStripMenuItem.Image = (Image)resources.GetObject("printPreviewToolStripMenuItem.Image");
-            printPreviewToolStripMenuItem.ImageTransparentColor = Color.Magenta;
-            printPreviewToolStripMenuItem.Name = "printPreviewToolStripMenuItem";
-            printPreviewToolStripMenuItem.Size = new Size(224, 26);
-            printPreviewToolStripMenuItem.Text = "Print Pre&view";
+            printToolStripMenuItem.Click += printToolStripMenuItem_Click_1;
             // 
             // toolStripSeparator2
             // 
@@ -153,6 +158,7 @@
             exitToolStripMenuItem.Name = "exitToolStripMenuItem";
             exitToolStripMenuItem.Size = new Size(224, 26);
             exitToolStripMenuItem.Text = "E&xit";
+            exitToolStripMenuItem.Click += exitToolStripMenuItem_Click;
             // 
             // editToolStripMenuItem
             // 
@@ -273,6 +279,24 @@
             aboutToolStripMenuItem.Size = new Size(150, 26);
             aboutToolStripMenuItem.Text = "&About...";
             // 
+            // printDocument1
+            // 
+            printDocument1.PrintPage += printDocument1_PrintPage;
+            // 
+            // printPreviewDialog1
+            // 
+            printPreviewDialog1.AutoScrollMargin = new Size(0, 0);
+            printPreviewDialog1.AutoScrollMinSize = new Size(0, 0);
+            printPreviewDialog1.ClientSize = new Size(400, 300);
+            printPreviewDialog1.Enabled = true;
+            printPreviewDialog1.Icon = (Icon)resources.GetObject("printPreviewDialog1.Icon");
+            printPreviewDialog1.Name = "printPreviewDialog1";
+            printPreviewDialog1.Visible = false;
+            // 
+            // printDialog1
+            // 
+            printDialog1.UseEXDialog = true;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -322,5 +346,8 @@
         private ToolStripMenuItem searchToolStripMenuItem;
         private ToolStripSeparator toolStripSeparator5;
         private ToolStripMenuItem aboutToolStripMenuItem;
+        private System.Drawing.Printing.PrintDocument printDocument1;
+        private PrintPreviewDialog printPreviewDialog1;
+        private PrintDialog printDialog1;
     }
 }
