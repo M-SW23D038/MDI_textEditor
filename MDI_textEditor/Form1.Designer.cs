@@ -87,6 +87,7 @@
             newToolStripMenuItem1.ShortcutKeys = Keys.Control | Keys.N;
             newToolStripMenuItem1.Size = new Size(224, 26);
             newToolStripMenuItem1.Text = "&New";
+            newToolStripMenuItem1.Click += newToolStripMenuItem1_Click;
             // 
             // openToolStripMenuItem1
             // 
