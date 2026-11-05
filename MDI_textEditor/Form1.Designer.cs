@@ -97,6 +97,7 @@
             openToolStripMenuItem1.ShortcutKeys = Keys.Control | Keys.O;
             openToolStripMenuItem1.Size = new Size(224, 26);
             openToolStripMenuItem1.Text = "&Open";
+            openToolStripMenuItem1.Click += openToolStripMenuItem1_Click_1;
             // 
             // toolStripSeparator
             // 
@@ -225,13 +226,13 @@
             // customizeToolStripMenuItem
             // 
             customizeToolStripMenuItem.Name = "customizeToolStripMenuItem";
-            customizeToolStripMenuItem.Size = new Size(32, 19);
+            customizeToolStripMenuItem.Size = new Size(161, 26);
             customizeToolStripMenuItem.Text = "&Customize";
             // 
             // optionsToolStripMenuItem
             // 
             optionsToolStripMenuItem.Name = "optionsToolStripMenuItem";
-            optionsToolStripMenuItem.Size = new Size(32, 19);
+            optionsToolStripMenuItem.Size = new Size(161, 26);
             optionsToolStripMenuItem.Text = "&Options";
             // 
             // helpToolStripMenuItem
@@ -244,30 +245,30 @@
             // contentsToolStripMenuItem
             // 
             contentsToolStripMenuItem.Name = "contentsToolStripMenuItem";
-            contentsToolStripMenuItem.Size = new Size(224, 26);
+            contentsToolStripMenuItem.Size = new Size(150, 26);
             contentsToolStripMenuItem.Text = "&Contents";
             // 
             // indexToolStripMenuItem
             // 
             indexToolStripMenuItem.Name = "indexToolStripMenuItem";
-            indexToolStripMenuItem.Size = new Size(224, 26);
+            indexToolStripMenuItem.Size = new Size(150, 26);
             indexToolStripMenuItem.Text = "&Index";
             // 
             // searchToolStripMenuItem
             // 
             searchToolStripMenuItem.Name = "searchToolStripMenuItem";
-            searchToolStripMenuItem.Size = new Size(224, 26);
+            searchToolStripMenuItem.Size = new Size(150, 26);
             searchToolStripMenuItem.Text = "&Search";
             // 
             // toolStripSeparator5
             // 
             toolStripSeparator5.Name = "toolStripSeparator5";
-            toolStripSeparator5.Size = new Size(221, 6);
+            toolStripSeparator5.Size = new Size(147, 6);
             // 
             // aboutToolStripMenuItem
             // 
             aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            aboutToolStripMenuItem.Size = new Size(224, 26);
+            aboutToolStripMenuItem.Size = new Size(150, 26);
             aboutToolStripMenuItem.Text = "&About...";
             // 
             // Form1
